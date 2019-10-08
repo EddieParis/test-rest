@@ -59,8 +59,10 @@ class RestServer(BaseRestServer):
         description: (string, optional) description of the project
         deadline: (date, optional) deadline of the project (must be a valid date in format YYYY-MM-DD:HH:MM:SS
         """
+        if len(params)<1:
+            return 403, "missing project name on the path"
         path_name = params[0]
-        return self.delete_object(Project, "name", path_name, params, query_params, json_body)
+        return self.insert_object(Project, "name", path_name, params, query_params, json_body)
 
     def post_v1_task(self, params, query_params, json_body):
         """ v1/project/{task_id} creates or updates a project, request body is json, fields are:
