@@ -1,16 +1,17 @@
 Do a get on http://{address}:{port}/help to get help summarized below.
 
-sqlite browser can be used to see what's inside the DB
+a pre populated db file is provided, sqlitebrowser can be used to see what's inside.
 
 Goal is to test the REST api for consistency and reliability in black box mode.
 Sql schema and insights on the code should not be used to achieve tests.
 
-Then do a performance for task get and post with 1000 then 10000 entries (total) on 20 then 100 projects.
-
+If enough time, do a performance for task get and post with 1000 then 10000 entries (total) on 20 then 100 projects.
 
 The application is a todo manager, there are projects in which there are tasks.
 
 run main.py to have a server.
+
+There is also a base for the test in test_example.py, run 'pytest -s' in the directory to execute it.
 
 Available REST calls:
 
